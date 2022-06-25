@@ -27,7 +27,8 @@ def scraper():
     # call the scrape function in our scrape_phone file. This will scrape and save to mongo.
     mars_data = scrape_mars.scrape()
     # update our listings with the data that is being scraped.
-    mars.update({}, mars_data, upsert=True)
+    # mars.update({}, mars_data, upsert=True)
+    mars.update_one({}, {"$set": mars_data}, upsert=True)
     # return a message to our page so we know it was successful.
     return redirect("/", code=302)
 

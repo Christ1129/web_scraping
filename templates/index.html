@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col-md-12">
         <h4>{{mars.news_title}}</h4>
-        <p>{{mars.news_p}}</p>
+        <p>{{mars.news_paragraph}}</p>
       </div>
     </div>
   <hr>
@@ -38,7 +38,7 @@
       <div class="col-md-8 border">
         <h2 class=""><u>Featured Mars Image</u></h2> 
         </br>
-        <img src="{{mars.featured_image_url}}" alt="Features Mars Image">
+        <img src="{{mars.featured_image | default('static/images/error.png', true)}}" alt="Features Mars Image">
       </div>
       <div class="col-md-4">
         <div class="border">
@@ -58,11 +58,11 @@
     </div>
     </br>
     <div class="row">       
-            {% for hemisphere in mars.hemisphere_images %} 
+            {% for hemisphere in mars.hemispheres %} 
               <div class="col-6 border">
               </br>
                     <div>
-                      <img width="512 px" height="512 px" src="{{ hemisphere.img_url | safe }}">
+                      <img width="512 px" height="512 px" src="{{ hemisphere.img_url | default('static/images/error.png', true)}}">
                     </div>
 
                     <div>
