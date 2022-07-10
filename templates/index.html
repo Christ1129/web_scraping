@@ -23,7 +23,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <h2><u>Latest Mars News</u></h2>
+        <h3><u>Latest Mars News</u></h3>
       </div>
     </div>
   </br>
@@ -36,24 +36,24 @@
   <hr>
     <div class="row">
       <div class="col-md-8 border">
-        <h2 class=""><u>Featured Mars Image</u></h2> 
+        <h3 class=""><u>Featured Mars Image</u></h3> 
         </br>
         <img src="{{mars.featured_image | default('static/images/error.png', true)}}" alt="Features Mars Image">
       </div>
-      <div class="col-md-4">
-        <div class="border">
-        
-        </br>
-        <div class="border">
-          <h5>Mars Facts</h5>
-            {{ mars.fact_table | safe }}
+      <div class="col-xl-4">
+        <div class="row" style="padding-left: 3%" ; id="mars-facts">
+            <h3>Mars Facts</h3>
+            <div class="table-responsive">
+                {{mars.facts|safe}}
+            </div>
         </div>
-      </div>
     </div>
+</div>
+</div>
   <hr>
     <div class="row">
       <div class="col-md-8 offset-4">
-        <h2 class="align-items-center"><u>Mars hemispheres</u></h2>  
+        <h3 class="align-items-center"><u>Mars hemispheres</u></h3>  
       </div>
     </div>
     </br>

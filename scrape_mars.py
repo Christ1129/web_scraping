@@ -50,7 +50,8 @@ def scrape(): # NASA Mars News
     df = tables[0]
     df.columns = ["Description","Mars","Earth"]
     idx_df = df.set_index("Description")
-    html_table= idx_df.to_html(classes="table table-striped")
+    fact_table= idx_df.to_html(classes="table table-striped")
+    # html_table= idx_df.to_html(classes="table table-striped")
 
 
     # Visit USGS webpage for Mars hemispehere images
@@ -112,7 +113,8 @@ def scrape(): # NASA Mars News
         "news_title": news_title,
         "news_paragraph": news_p,
         "featured_image": featured_image_url,
-        "facts": html_table,
+        # "facts": html_table,
+        "facts": fact_table,
         "hemispheres": hemisphere_images,
         "last_modified": dt.datetime.now()
     }
