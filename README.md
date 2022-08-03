@@ -12,3 +12,8 @@ Finally, we received a geology lesson from https://marshemispheres.com/ and got 
 
 ![image](https://github.com/Christ1129/web_scraping_challenge/blob/main/Images/final_app.png) 
 
+<hr>
+Contact : 
+
+* tourteau.christian@gmail.com
+* https://www.linkedin.com/in/christian-tourteau/
